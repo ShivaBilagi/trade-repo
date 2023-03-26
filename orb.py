@@ -124,5 +124,5 @@ class ORB_backtest:
         result = pd.DataFrame({"date":date, "first_high":first_high, "first_low":first_low
                      , "execute_time":execute_time, "execute_price":execute_price
                      , "out_time":out_time, "out_price":out_price, "profit_loss":profit_loss})
-        result = result["profit_loss"]*self.quantity
+        result["profit_loss"] = result["profit_loss"]*self.quantity
         return result
